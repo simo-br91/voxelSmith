@@ -1,0 +1,5 @@
+{
+  "name": "VoxelSmith",
+  "description": "A specialized generative tool for creating Minecraft-style character concepts and texture skins using Gemini models.",
+  "requestFramePermissions": []
+}
