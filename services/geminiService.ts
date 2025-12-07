@@ -12,7 +12,7 @@ export const generateVoxelAsset = async (
 ): Promise<GeneratedAsset> => {
   // --- MODE TEXTURE PAINTER : on passe par le backend ---
   if (mode === "painter" && paintData) {
-    const { template } = paintData;
+    const { template, resolution  } = paintData;
 
     // PNG template en base64 (on enlève "data:image/png;base64,")
     const templateBase64 = template.dataUrl.split(",")[1];
@@ -24,7 +24,7 @@ export const generateVoxelAsset = async (
       body: JSON.stringify({
         prompt,
         templatePngBase64: templateBase64,
-        colorMap: template.colorMap,
+        resolution,
       }),
     });
 

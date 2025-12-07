@@ -19,6 +19,6 @@ export interface TextureTemplateResult {
 }
 
 export interface PaintInput {
-  prompt: string;
   template: TextureTemplate;
+  resolution: number;
 }
